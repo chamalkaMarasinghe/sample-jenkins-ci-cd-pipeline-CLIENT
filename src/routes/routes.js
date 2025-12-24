@@ -3,6 +3,7 @@ import Root from "../Layout/Root";
 import {createBrowserRouter} from "react-router-dom";
 import ErrorOccurPage from "../pages/Error";
 import PlanClientHomePage from "../pages/ClientHome";
+import Orders from "../pages/Orders";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
                 index: true,
                 element: <PlanClientHomePage/>,
             },
+            {
+                path: "orders",
+                element: <Orders />
+            }
         ],
     },
 ]);
