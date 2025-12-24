@@ -1,0 +1,185 @@
+.btn-base {
+  @apply w-full h-full px-4 py-2 font-medium transition-all duration-300 ease-in-out focus:outline-none active:scale-95;
+  border-radius: 0.375rem;
+  background: transparent; /* let variants decide */
+}
+
+/* Button Sizes */
+.btn-sm { @apply px-3 py-1.5 text-sm; }
+.btn-md { @apply px-4 py-2 text-base; }
+.btn-lg { @apply px-6 py-3 text-lg; }
+
+/* Loading State */
+.btn-loading {
+  @apply opacity-75 cursor-wait;
+}
+.btn-loading::before {
+  content: '';
+  display: inline-block;
+  margin-right: 0.5em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+  border-top-color: transparent;
+  border-radius: 9999px;
+  animation: spin 1s linear infinite;
+  width: 1em;
+  height: 1em;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: #fff;
+}
+
+
+.btn-primary:hover:not(:disabled) { filter: brightness(1.1); }
+.btn-primary:disabled {
+  background: linear-gradient(88.95deg, var(--color-content-03) 16.46%, var(--color-content-02) 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: var(--color-radial-background-03);
+  color: var(--color-content);
+  border: 1px solid var(--color-stroke-01);
+  border-radius: 0.375rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-radial-background-04);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:disabled {
+  background: var(--color-radial-background-04);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-secondary);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: linear-gradient(88.95deg, var(--color-primary) 16.46%, var(--color-secondary) 100%);
+  border-color: transparent;
+  color: var(--color-content);
+}
+
+.btn-outline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--color-content-03);
+  color: var(--color-content-03);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: transparent;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  text-decoration: underline;
+  color: var(--color-secondary);
+}
+
+.btn-ghost:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: var(--color-content-03);
+}
+
+/* Plain Button */
+.btn-plain {
+  background: linear-gradient(88.95deg, var(--color-primary) 16.46%, var(--color-secondary) 100%);
+  border: none;
+  color: var(--color-content);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-plain:hover:not(:disabled) { filter: brightness(1.1); }
+.btn-plain:disabled {
+  background: linear-gradient(88.95deg, var(--color-content-03) 16.46%, var(--color-content-02) 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Icon Button */
+.btn-icon {
+  background: var(--gradient-primary);
+  padding: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-icon:hover:not(:disabled) { filter: brightness(1.1); }
+.btn-icon:disabled {
+  background: linear-gradient(88.95deg, var(--color-content-03) 16.46%, var(--color-content-02) 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Link Button */
+.btn-link {
+  background: transparent;
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.btn-link:hover:not(:disabled) { color: var(--color-secondary); }
+.btn-link:disabled { opacity: 0.5; cursor: not-allowed; color: var(--color-content-03); }
+
+/* Success Button */
+.btn-success {
+  background: var(--gradient-success);
+  color: var(--color-content);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover:not(:disabled) { filter: brightness(1.1); }
+.btn-success:disabled {
+  background: linear-gradient(88.95deg, var(--color-content-03) 16.46%, var(--color-content-02) 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-success:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Error / Danger Button */
+.btn-error {
+  background: var(--gradient-error);
+  color: var(--color-content);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-error:hover:not(:disabled) { filter: brightness(1.1); }
+.btn-error:disabled {
+  background: linear-gradient(88.95deg, var(--color-content-03) 16.46%, var(--color-content-02) 100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-error:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-error);
+}

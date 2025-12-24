@@ -1,0 +1,51 @@
+/* Base Input Styles */
+.input-base {
+  @apply w-full px-4 py-2 rounded-lg border border-[var(--color-stroke-01)] bg-[var(--color-radial-background-04)] text-[var(--color-content-01)];
+  @apply focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent;
+  @apply transition-all duration-200 ease-in-out;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Textarea */
+.input-textarea {
+  height: 10em;
+  resize: vertical;
+  min-height: 6em;
+}
+
+/* Error */
+.input-error {
+  @apply border-light-red;
+}
+
+/* Icon padding adjustments (em-based) */
+.input-icon-left {
+  padding-left: 2.5em;
+}
+
+.input-icon-right {
+  padding-right: 2.5em;
+}
+
+/* Icon positions */
+.icon-left {
+  left: 0.75em;
+}
+
+.icon-right {
+  right: 0.75em;
+}
+
+/* Dark theme */
+.theme-dark .input-base {
+  @apply bg-[var(--color-radial-background-04)];
+}
+
+.theme-dark .input-error {
+  @apply border-light-red;
+}
+
+/* Placeholder */
+.input-base::placeholder {
+  @apply text-[var(--color-content-03)] opacity-50;
+}

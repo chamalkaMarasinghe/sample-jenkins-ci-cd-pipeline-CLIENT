@@ -1,0 +1,33 @@
+/* Base Popover */
+/* .popover-base {
+  @apply transition-all duration-200 ease-in-out border shadow-lg rounded-xl;
+  background: var(--color-background-01);
+  color: var(--color-content);
+  border-color: var(--color-stroke-01);
+  padding: 0.75rem;
+  min-width: 12rem;
+  max-width: 20rem;
+  font-family: Inter, sans-serif;
+} */
+
+/* Hover border effect */
+.popover-base:hover {
+  border-color: var(--color-primary);
+}
+
+/* Variants */
+.popover-navbar {
+  @apply min-w-[11rem] p-2;
+}
+
+.popover-card {
+  @apply p-4 min-w-[14rem];
+}
+
+/* Trigger wrapper */
+.popover-trigger {
+  @apply inline-flex items-center transition-all duration-200 cursor-pointer select-none;
+}
+.popover-trigger:hover {
+  color: var(--color-primary);
+}

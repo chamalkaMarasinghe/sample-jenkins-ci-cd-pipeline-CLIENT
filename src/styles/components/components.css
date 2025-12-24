@@ -1,0 +1,35 @@
+@import './button.css';
+@import './popover.css';
+@import './input.css';
+@import './avatar.css';
+@import "./customFormSteps.css";
+@import "./statusTracker.css";
+@import "./buttonGroup.css";
+
+.sidebar-gradient {
+  background: var(--gradient-sidebar);
+}
+
+.sidebar-gradient-hover:hover {
+  background: var(--gradient-sidebar);
+}
+
+/* Kill default Popover background & border */
+.ant-popover .ant-popover-inner {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.ant-popover .ant-popover-inner-content {
+  padding: 0 !important;
+}
+
+.text-ref {
+  background: var(--ref-content);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,109 @@
+.subscription-card {
+  background: var(--color-background-01);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.18);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid var(--color-background-03);
+  transition: background 0.3s, border 0.3s;
+}
+.subscription-card.active {
+  background: var(--background-gradient);
+  position: relative;
+  z-index: 2;
+  transform: scale(1.1);
+}
+.subscription-card-content {
+  width: 100%;
+}
+.subscription-card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-content-01);
+  margin-bottom: 0.5rem;
+}
+.subscription-card.active .subscription-card-title {
+  color: var(--color-content);
+}
+.subscription-card-price-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.subscription-card-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-content-01);
+}
+.subscription-card.active .subscription-card-price {
+  color: var(--color-content);
+}
+.subscription-card-per {
+  font-size: 1rem;
+  color: var(--color-content-03);
+}
+.subscription-card.active .subscription-card-per {
+  color: var(--color-content);
+  opacity: 0.8;
+}
+.subscription-card-desc {
+  font-size: 0.98rem;
+  color: var(--color-content-03);
+  margin-bottom: 1.2rem;
+}
+.subscription-card.active .subscription-card-desc {
+  color: var(--color-content);
+  opacity: 0.85;
+}
+.subscription-card-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+.subscription-card-option {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.05rem;
+  color: var(--color-content-03);
+  transition: color 0.3s;
+}
+.subscription-card-option.included {
+  font-weight: 500;
+}
+.subscription-card-option.excluded {
+  opacity: 0.55;
+}
+.subscription-card-option-label {
+  font-size: 1rem;
+}
+.subscription-card-option.excluded .subscription-card-option-label {
+  text-decoration: line-through;
+  color: var(--color-content);
+  opacity: 0.55;
+}
+.subscription-card.active .subscription-card-option-label {
+  color: var(--color-content);
+  opacity: 1;
+}
+.subscription-card-btn {
+  width: 100%;
+  height: 46px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  margin-top: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+.subscription-card-btn.active {
+  color: #fff !important;
+}
+.subscription-card-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
