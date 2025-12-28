@@ -4,6 +4,7 @@ import {createBrowserRouter} from "react-router-dom";
 import ErrorOccurPage from "../pages/Error";
 import PlanClientHomePage from "../pages/ClientHome";
 import Orders from "../pages/Orders";
+import Services from "../pages/Services";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: "orders",
                 element: <Orders />
+            },
+            {
+                path: "services",
+                element: <Services />
             }
         ],
     },
