@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CONFIGURATIONS } from "../config/envConfig";
+import { useThunk } from "../hooks/useThunk";
+import { signUploadUrl } from "../store/thunks/fileThunk";
 
 const Orders = () => {
+
+    const [doSignUploadUrl, isSignUploadUrl, errorSignUploadUrl] = useThunk(signUploadUrl);
+
+    useEffect(() => {
+        signUploadUrlMethod()
+    }, [])
+
+    const signUploadUrlMethod = async () => {
+        const res = await doSignUploadUrl();
+        console.log(res);
+        if(res?.susccess){
+            console.log("successed signing url");
+        }else{
+            console.log("failed signing url");
+        }
+    }
+
     return (
         <>
             <div className="max-w-4xl px-6 py-10">
